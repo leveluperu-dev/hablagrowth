@@ -1,0 +1,25 @@
+services:
+  mysql:
+    image: mysql/mysql-server:8.0
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: ''
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+      MYSQL_ROOT_HOST: '%'
+      MYSQL_DATABASE: hablagrowth
+    volumes:
+      - 'mysql-data:/var/lib/mysql'
+    networks:
+      - hablagrowth
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
+      retries: 5
+      interval: 3s
+
+networks:
+  hablagrowth:
+    driver: bridge
+
+volumes:
+  mysql-data:
