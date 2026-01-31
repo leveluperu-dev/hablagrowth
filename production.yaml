@@ -9,7 +9,6 @@ services:
       - ./.env:/var/www/html/.env
     networks:
       - traefik
-      - hablagrowth
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.hablagrowth.rule=Host(`hablagrowth.online`)"
@@ -24,10 +23,8 @@ services:
     command: php artisan queue:work
     restart: always
     networks:
-      - hablagrowth
+      - traefik
 
 networks:
   traefik:
-    external: true
-  hablagrowth:
     external: true
