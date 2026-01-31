@@ -1,0 +1,32 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+      - ./:/var/www/html
+    networks:
+      - traefik
+      - hablagrowth
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.hablagrowth.rule=Host(`hablagrowth.online`)"
+      - "traefik.http.routers.hablagrowth.entrypoints=websecure"
+      - "traefik.http.routers.hablagrowth.tls.certresolver=myresolver"
+      - "traefik.http.services.hablagrowth.loadbalancer.server.port=80"
+
+  queue:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: php artisan queue:work
+    restart: always
+    networks:
+      - hablagrowth
+
+networks:
+  traefik:
+    external: true
+  hablagrowth:
+    external: true
