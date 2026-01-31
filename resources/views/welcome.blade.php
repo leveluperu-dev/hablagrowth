@@ -17,7 +17,8 @@
                 las grandes empresas, simplificada para ti.
             </p>
             <div class="flex justify-center gap-4">
-                <a href="#services"
+                <a href="https://wa.me/51945178963?text=Hola,%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20las%20soluciones%20de%20HablaGrowth."
+                    target="_blank"
                     class="px-8 py-4 bg-brand-primary text-brand-dark font-bold rounded-full hover:bg-brand-accent transition-all duration-300 shadow-[0_0_20px_rgba(6,182,212,0.5)]">
                     Explorar Soluciones
                 </a>
@@ -58,7 +59,8 @@
                         <li class="flex items-center"><span class="text-brand-primary mr-2">✓</span> Sin Límites de
                             Ejecución (Según plan)</li>
                     </ul>
-                    <a href="/automation"
+                    <a href="https://wa.me/51945178963?text=Hola,%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20servicio%20de%20Automatizaci%C3%B3n%20de%20Procesos."
+                        target="_blank"
                         class="text-brand-primary font-bold hover:text-brand-accent flex items-center group-hover:translate-x-2 transition-transform">
                         Saber más <span>→</span>
                     </a>
@@ -84,7 +86,8 @@
                         <li class="flex items-center"><span class="text-brand-secondary mr-2">✓</span> Reportes de
                             Rendimiento</li>
                     </ul>
-                    <a href="/omnichannel"
+                    <a href="https://wa.me/51945178963?text=Hola,%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20servicio%20de%20Omnicanalidad%20Total."
+                        target="_blank"
                         class="text-brand-secondary font-bold hover:text-white flex items-center group-hover:translate-x-2 transition-transform">
                         Saber más <span>→</span>
                     </a>
@@ -147,7 +150,8 @@
                         @endif
                     </ul>
 
-                    <a href="{{ route('subscribe.show', $plan) }}"
+                    <a href="https://wa.me/51945178963?text=Hola,%20estoy%20interesado%20en%20el%20plan%20{{ urlencode($plan->name) }}%20de%20{{ urlencode($plan->service->name) }}."
+                        target="_blank"
                         class="block text-center w-full py-3 rounded-lg transition-colors font-bold {{ $plan->name === 'Growth' ? 'bg-brand-primary text-brand-dark hover:bg-brand-accent' : ($plan->name === 'Enterprise' ? 'border border-brand-secondary text-brand-secondary hover:bg-brand-secondary/10' : 'border border-white/10') }}">
                         {{ $plan->name === 'Enterprise' ? 'Contactar' : 'Comenzar' }}
                     </a>

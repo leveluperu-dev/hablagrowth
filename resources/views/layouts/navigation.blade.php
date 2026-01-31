@@ -6,9 +6,7 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <span class="text-xl font-bold tracking-tighter text-white">
-                            Habla<span class="text-brand-primary">Growth</span>
-                        </span>
+                        <img src="{{ asset('logo-light.png') }}" alt="HablaGrowth Logo" class="h-10 w-auto">
                     </a>
                 </div>
 
