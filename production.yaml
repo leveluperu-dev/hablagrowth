@@ -14,7 +14,7 @@ services:
       - "traefik.enable=true"
       - "traefik.http.routers.hablagrowth.rule=Host(`hablagrowth.online`)"
       - "traefik.http.routers.hablagrowth.entrypoints=websecure"
-      - "traefik.http.routers.hablagrowth.tls.certresolver=myresolver"
+      - "traefik.http.routers.hablagrowth.tls.certresolver=letsencrypt"
       - "traefik.http.services.hablagrowth.loadbalancer.server.port=80"
 
   queue:
