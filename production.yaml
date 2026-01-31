@@ -5,7 +5,8 @@ services:
       dockerfile: Dockerfile
     restart: always
     volumes:
-      - ./:/var/www/html
+      - ./storage:/var/www/html/storage
+      - ./.env:/var/www/html/.env
     networks:
       - traefik
       - hablagrowth
