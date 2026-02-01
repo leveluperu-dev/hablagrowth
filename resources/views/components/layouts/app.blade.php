@@ -25,7 +25,7 @@
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center gap-2">
                     <a href="/">
-                        <img src="/images/logo.png" alt="HablaGrowth" class="h-10 w-auto">
+                        <x-logo class="h-10 w-auto" />
                     </a>
                 </div>
 
