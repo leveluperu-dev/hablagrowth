@@ -1,67 +1,88 @@
 <x-layouts.app>
-    <div class="relative py-20 min-h-screen bg-brand-dark">
-        <!-- Abstract Bg -->
-        <div class="absolute inset-0 overflow-hidden pointer-events-none">
-            <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-primary/5 rounded-full blur-3xl"></div>
-        </div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <!-- Header -->
+    <div class="py-12 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <span class="text-brand-primary font-bold tracking-widest uppercase text-sm">Managed n8n Services</span>
-                <h1 class="text-4xl md:text-5xl font-extrabold mt-2 mb-6 text-white">
-                    Automatización de <span class="text-gradient">Clase Mundial</span>
+                <h1 class="text-5xl font-extrabold tracking-tight mb-6">
+                    <span class="text-white">Pon tu Negocio en</span>
+                    <span class="text-brand-primary">Piloto Automático</span>
                 </h1>
-                <p class="text-xl text-gray-400 max-w-2xl mx-auto">
-                    Deja de perder tiempo en tareas manuales. Conectamos tus herramientas favoritas para que tu negocio
-                    funcione en piloto automático.
+                <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-300">
+                    Olvídate de las tareas aburridas y repetitivas. Deja que la tecnología trabaje por ti mientras tú te
+                    enfocas en vender y crecer.
                 </p>
+                <div class="mt-8">
+                    <a href="https://wa.me/51945178963?text=Hola,%20quiero%20saber%20c%C3%B3mo%20poner%20mi%20negocio%20en%20piloto%20autom%C3%A1tico."
+                        target="_blank"
+                        class="inline-block px-8 py-4 bg-brand-primary text-brand-dark font-bold rounded-full hover:bg-brand-accent transition-all shadow-lg hover:shadow-brand-primary/50">
+                        Quiero automatizar mi negocio
+                    </a>
+                </div>
             </div>
 
-            <!-- Content Grid -->
+            <!-- Pain Points -->
             <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
-                <div class="space-y-8">
-                    <div class="glass p-6 rounded-xl border-l-4 border-brand-primary">
-                        <h3 class="text-xl font-bold text-white mb-2">Integraciones Ilimitadas</h3>
-                        <p class="text-gray-400">Conectamos tu CRM, correo, hojas de cálculo y más de 200 aplicaciones
-                            sin escribir código.</p>
-                    </div>
-                    <div class="glass p-6 rounded-xl border-l-4 border-brand-primary">
-                        <h3 class="text-xl font-bold text-white mb-2">Webhooks Personalizados</h3>
-                        <p class="text-gray-400">Recibe datos en tiempo real de cualquier fuente y dispara acciones
-                            instantáneas.</p>
-                    </div>
-                    <div class="glass p-6 rounded-xl border-l-4 border-brand-primary">
-                        <h3 class="text-xl font-bold text-white mb-2">Infraestructura Gestionada</h3>
-                        <p class="text-gray-400">Olvídate de servidores. Nosotros mantenemos tu instancia de n8n segura,
-                            actualizada y escalable.</p>
-                    </div>
+                <div class="order-2 md:order-1">
+                    <h2 class="text-3xl font-bold text-white mb-6">¿Te sientes esclavo de tu propio negocio?</h2>
+                    <ul class="space-y-4 text-gray-300 text-lg">
+                        <li class="flex items-start">
+                            <span class="text-red-400 mr-2">✕</span> Copias y pegas datos manualmente todo el día.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-red-400 mr-2">✕</span> Se te olvida enviar facturas o correos de
+                            seguimiento.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-red-400 mr-2">✕</span> Tienes la información dispersa en mil Excels y
+                            chats.
+                        </li>
+                    </ul>
                 </div>
-
-                <!-- Visual/Image Placeholder -->
+                <!-- Placeholder for Image or Icon -->
                 <div
-                    class="glass p-2 rounded-2xl bg-gradient-to-br from-brand-primary/20 to-brand-dark aspect-square flex items-center justify-center relative shadow-[0_0_50px_rgba(6,182,212,0.2)]">
-                    <!-- Stylized Nodes SVG -->
-                    <svg class="w-2/3 h-2/3 text-brand-primary opacity-80" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="1.5">
-                        <circle cx="6" cy="6" r="3" />
-                        <circle cx="18" cy="18" r="3" />
-                        <path d="M8.5 8.5l7 7" />
-                        <circle cx="18" cy="6" r="3" />
-                        <path d="M8.5 15.5l7 -7" />
-                        <circle cx="6" cy="18" r="3" />
-                        <path d="M8.5 6l7 0" />
+                    class="order-1 md:order-2 bg-white/5 rounded-3xl p-8 border border-white/10 flex items-center justify-center h-64">
+                    <svg class="w-32 h-32 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <div class="absolute inset-0 bg-brand-primary/10 rounded-2xl blur-xl -z-10"></div>
+                    <span class="absolute text-gray-400 font-bold">Tiempo Perdido</span>
                 </div>
             </div>
 
-            <!-- CTA -->
-            <div class="glass p-12 rounded-3xl text-center border-t border-brand-primary/30">
-                <h2 class="text-3xl font-bold text-white mb-6">¿Listo para automatizar?</h2>
-                <a href="/#pricing"
-                    class="inline-block px-10 py-4 bg-brand-primary text-brand-dark font-bold rounded-full hover:bg-white hover:text-brand-dark transition-all duration-300 transform hover:scale-105">
-                    Ver Planes de Automatización
+            <!-- Solution -->
+            <div class="bg-brand-primary/10 rounded-3xl p-8 md:p-12 mb-24 border border-brand-primary/20">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold text-white mb-4">Lo hacemos simple para ti</h2>
+                    <p class="text-gray-300">Conectamos tus aplicaciones (WhatsApp, Excel, Correo) para que hablen entre
+                        ellas.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="glass p-6 rounded-xl">
+                        <div class="text-brand-primary text-4xl mb-4">⚡</div>
+                        <h3 class="text-xl font-bold text-white mb-2">Respuesta Inmediata</h3>
+                        <p class="text-gray-400">Atiende a tus clientes al instante, incluso mientas duermes.</p>
+                    </div>
+                    <div class="glass p-6 rounded-xl">
+                        <div class="text-brand-primary text-4xl mb-4">🤖</div>
+                        <h3 class="text-xl font-bold text-white mb-2">Cero Errores</h3>
+                        <p class="text-gray-400">Los robots no se equivocan al copiar datos. Tu información siempre
+                            perfecta.</p>
+                    </div>
+                    <div class="glass p-6 rounded-xl">
+                        <div class="text-brand-primary text-4xl mb-4">💰</div>
+                        <h3 class="text-xl font-bold text-white mb-2">Vende Más</h3>
+                        <p class="text-gray-400">Recupera clientes perdidos y cierra ventas automáticamente.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Final -->
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-white mb-6">¿Listo para recuperar tu vida?</h2>
+                <a href="https://wa.me/51945178963?text=Hola,%20me%20interesa%20empezar%20con%20la%20automatizaci%C3%B3n."
+                    target="_blank"
+                    class="inline-block px-8 py-4 bg-brand-primary text-brand-dark font-bold rounded-full hover:bg-brand-accent transition-all shadow-lg hover:shadow-brand-primary/50">
+                    Hablemos por WhatsApp
                 </a>
             </div>
         </div>

@@ -1,63 +1,78 @@
 <x-layouts.app>
-    <div class="relative py-20 min-h-screen bg-brand-dark">
-        <!-- Abstract Bg -->
-        <div class="absolute inset-0 overflow-hidden pointer-events-none">
-            <div class="absolute top-0 left-0 w-[800px] h-[800px] bg-brand-secondary/5 rounded-full blur-3xl"></div>
-        </div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <!-- Header -->
+    <div class="py-12 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <span class="text-brand-secondary font-bold tracking-widest uppercase text-sm">Managed Chatwoot
-                    Services</span>
-                <h1 class="text-4xl md:text-5xl font-extrabold mt-2 mb-6 text-white">
-                    Omnicanalidad <span class="text-gradient">Total</span>
+                <h1 class="text-5xl font-extrabold tracking-tight mb-6">
+                    <span class="text-white">Una Sola Bandeja para</span>
+                    <span class="text-brand-secondary">Todos tus Clientes</span>
                 </h1>
-                <p class="text-xl text-gray-400 max-w-2xl mx-auto">
-                    Atiende a tus clientes donde ellos estén. WhatsApp, Facebook, Instagram y Webchat en una sola
-                    pantalla.
+                <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-300">
+                    WhatsApp, Messenger, Instagram... ¿Te vuelves loco cambiando de app? Centraliza todo y responde más
+                    rápido.
                 </p>
+                <div class="mt-8">
+                    <a href="https://wa.me/51945178963?text=Hola,%20quiero%20ordenar%20mis%20chats%20con%20Omnicanalidad."
+                        target="_blank"
+                        class="inline-block px-8 py-4 bg-brand-secondary text-white font-bold rounded-full hover:bg-white hover:text-brand-secondary transition-all shadow-lg hover:shadow-brand-secondary/50">
+                        Quiero organizar mis chats
+                    </a>
+                </div>
             </div>
 
-            <!-- Content Grid -->
+            <!-- Feature Showcase -->
             <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
-                <!-- Visual/Image Placeholder (Left on desktop) -->
                 <div
-                    class="order-2 md:order-1 glass p-2 rounded-2xl bg-gradient-to-br from-brand-secondary/20 to-brand-dark aspect-square flex items-center justify-center relative shadow-[0_0_50px_rgba(212,175,55,0.2)]">
-                    <!-- Stylized Chat SVG -->
-                    <svg class="w-2/3 h-2/3 text-brand-secondary opacity-80" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="1.5">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                    </svg>
-                    <div class="absolute inset-0 bg-brand-secondary/10 rounded-2xl blur-xl -z-10"></div>
+                    class="bg-white/5 rounded-3xl p-8 border border-white/10 flex items-center justify-center h-64 order-1">
+                    <!-- Icon representation of chaos vs order -->
+                    <div class="text-center">
+                        <div class="text-4xl mb-4">🤯 ➡️ 😎</div>
+                        <p class="text-gray-400 font-bold">Del Caos al Control</p>
+                    </div>
                 </div>
-
-                <div class="order-1 md:order-2 space-y-8">
-                    <div class="glass p-6 rounded-xl border-l-4 border-brand-secondary">
-                        <h3 class="text-xl font-bold text-white mb-2">Bandeja Compartida</h3>
-                        <p class="text-gray-400">Todo tu equipo de soporte y ventas en un solo lugar. Asigna
-                            conversaciones, añade notas y etiqueta chats.</p>
-                    </div>
-                    <div class="glass p-6 rounded-xl border-l-4 border-brand-secondary">
-                        <h3 class="text-xl font-bold text-white mb-2">Chatbots Híbridos</h3>
-                        <p class="text-gray-400">Automatiza la primera respuesta y deriva a agentes humanos solo cuando
-                            sea necesario.</p>
-                    </div>
-                    <div class="glass p-6 rounded-xl border-l-4 border-brand-secondary">
-                        <h3 class="text-xl font-bold text-white mb-2">Reportes Detallados</h3>
-                        <p class="text-gray-400">Mide tiempos de respuesta, satisfacción del cliente y productividad de
-                            tus agentes.</p>
-                    </div>
+                <div class="order-2">
+                    <h2 class="text-3xl font-bold text-white mb-6">No pierdas ventas por "visto"</h2>
+                    <p class="text-gray-300 text-lg mb-6">
+                        Cuando un cliente pregunta, quiere respuesta YA. Si tardas en contestar porque no viste el
+                        mensaje en Instagram, perdiste la venta.
+                    </p>
+                    <ul class="space-y-4 text-gray-300 text-lg">
+                        <li class="flex items-center">
+                            <span class="text-brand-secondary mr-2">✓</span> Todo en una sola pantalla.
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-brand-secondary mr-2">✓</span> Tu equipo puede responder al mismo tiempo.
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-brand-secondary mr-2">✓</span> Supervisa qué responden tus vendedores.
+                        </li>
+                    </ul>
                 </div>
             </div>
 
-            <!-- CTA -->
-            <div class="glass p-12 rounded-3xl text-center border-t border-brand-secondary/30">
-                <h2 class="text-3xl font-bold text-white mb-6">¿Listo para conectar?</h2>
-                <a href="/#pricing"
-                    class="inline-block px-10 py-4 bg-brand-secondary text-brand-dark font-bold rounded-full hover:bg-white hover:text-brand-dark transition-all duration-300 transform hover:scale-105">
-                    Ver Planes Omnicanal
+            <!-- Benefits -->
+            <div class="grid md:grid-cols-3 gap-8 mb-24">
+                <div class="glass p-6 rounded-xl border-t-2 border-brand-secondary">
+                    <h3 class="text-xl font-bold text-white mb-2">Multicanal</h3>
+                    <p class="text-gray-400">Tus clientes eligen por dónde escribirte, tú respondes desde un solo lugar.
+                    </p>
+                </div>
+                <div class="glass p-6 rounded-xl border-t-2 border-brand-secondary">
+                    <h3 class="text-xl font-bold text-white mb-2">Colaborativo</h3>
+                    <p class="text-gray-400">Asigna conversaciones a tu equipo. Nadie se choca con nadie.</p>
+                </div>
+                <div class="glass p-6 rounded-xl border-t-2 border-brand-secondary">
+                    <h3 class="text-xl font-bold text-white mb-2">Profesional</h3>
+                    <p class="text-gray-400">Da una imagen de empresa grande y organizada. Genera confianza.</p>
+                </div>
+            </div>
+
+            <!-- CTA Final -->
+            <div class="text-center rounded-3xl bg-brand-secondary/20 p-12 border border-brand-secondary/20">
+                <h2 class="text-3xl font-bold text-white mb-6">Dale superpoderes a tu atención al cliente</h2>
+                <a href="https://wa.me/51945178963?text=Hola,%20me%20interesa%20la%20Omnicanalidad%20para%20mi%20equipo."
+                    target="_blank"
+                    class="inline-block px-8 py-4 bg-brand-secondary text-white font-bold rounded-full hover:bg-white hover:text-brand-secondary transition-all shadow-lg">
+                    Contactar Experto
                 </a>
             </div>
         </div>
