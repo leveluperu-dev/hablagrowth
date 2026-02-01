@@ -5,8 +5,25 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <img src="{{ asset('logo-light.png') }}" alt="HablaGrowth Logo" class="h-10 w-auto">
+                    <a href="{{ route('dashboard') }}" class="flex items-center gap-2 group">
+                        <!-- Logo Icon -->
+                        <svg class="h-10 w-auto text-brand-primary group-hover:text-brand-accent transition-colors"
+                            viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M25 46C36.598 46 46 36.598 46 25C46 13.402 36.598 4 25 4C13.402 4 4 13.402 4 25C4 36.598 13.402 46 25 46Z"
+                                stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 30L22 23L29 30L39 16" stroke="currentColor" stroke-width="3"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M39 16V23" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M39 16H32" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <!-- Logo Text -->
+                        <span
+                            class="text-2xl font-extrabold tracking-tighter text-white group-hover:text-gray-100 transition-colors">
+                            Habla<span class="text-brand-primary group-hover:text-brand-accent">Growth</span>
+                        </span>
                     </a>
                 </div>
 
