@@ -7,7 +7,7 @@
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}" class="flex items-center gap-2 group">
                         <!-- Logo Icon -->
-                        <svg class="h-10 w-auto text-brand-primary group-hover:text-brand-accent transition-colors"
+                        <svg class="h-14 w-auto text-brand-primary group-hover:text-brand-accent transition-colors"
                             viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M25 46C36.598 46 46 36.598 46 25C46 13.402 36.598 4 25 4C13.402 4 4 13.402 4 25C4 36.598 13.402 46 25 46Z"
@@ -21,7 +21,7 @@
                         </svg>
                         <!-- Logo Text -->
                         <span
-                            class="text-2xl font-extrabold tracking-tighter text-white group-hover:text-gray-100 transition-colors">
+                            class="text-3xl font-extrabold tracking-tighter text-white group-hover:text-gray-100 transition-colors">
                             Habla<span class="text-brand-primary group-hover:text-brand-accent">Growth</span>
                         </span>
                     </a>
