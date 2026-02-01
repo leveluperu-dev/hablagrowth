@@ -21,13 +21,10 @@
 
             <!-- Feature Showcase -->
             <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
-                <div
-                    class="bg-white/5 rounded-3xl p-8 border border-white/10 flex items-center justify-center h-64 order-1">
-                    <!-- Icon representation of chaos vs order -->
-                    <div class="text-center">
-                        <div class="text-4xl mb-4">🤯 ➡️ 😎</div>
-                        <p class="text-gray-400 font-bold">Del Caos al Control</p>
-                    </div>
+                <div class="order-1 rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+                    <img src="{{ asset('images/omnichannel-team.png') }}"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                        alt="Equipo Omnicanal">
                 </div>
                 <div class="order-2">
                     <h2 class="text-3xl font-bold text-white mb-6">No pierdas ventas por "visto"</h2>

@@ -37,14 +37,11 @@
                         </li>
                     </ul>
                 </div>
-                <!-- Placeholder for Image or Icon -->
-                <div
-                    class="order-1 md:order-2 bg-white/5 rounded-3xl p-8 border border-white/10 flex items-center justify-center h-64">
-                    <svg class="w-32 h-32 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
-                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <span class="absolute text-gray-400 font-bold">Tiempo Perdido</span>
+                <!-- Image Section -->
+                <div class="order-1 md:order-2 rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+                    <img src="{{ asset('images/automation-success.png') }}"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                        alt="Automatización Exitosa">
                 </div>
             </div>
 
