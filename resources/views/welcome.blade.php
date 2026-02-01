@@ -3,8 +3,7 @@
     <div x-data="{ 
             show: false,
             init() {
-                setTimeout(() => this.show = true, 10000); // Show after 10s
-                // Exit intent logic could be added here later if needed
+                setTimeout(() => this.show = true, 30000); // Show after 30s
             },
             close() {
                 this.show = false;
@@ -97,29 +96,42 @@
     </div>
 
     <!-- Pain Points Section (Dolores) -->
-    <div class="py-24 bg-brand-dark relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="py-24 bg-brand-dark relative overflow-hidden">
+        <!-- Background Image for context -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <img src="{{ asset('images/pain-points.png') }}" class="w-full h-full object-cover grayscale"
+                alt="Chaos Office">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">¿Te suena familiar?</h2>
-                <p class="text-gray-400 text-lg">La realidad de muchos empresarios peruanos antes de conocernos.</p>
+                <span class="text-red-500 font-bold tracking-widest uppercase mb-2 block">La Realidad Actual</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-6">¿Te sientes identificado con esta imagen?</h2>
+                <div class="max-w-4xl mx-auto mb-12 rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+                    <img src="{{ asset('images/pain-points.png') }}"
+                        class="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-700"
+                        alt="Empresario estresado">
+                </div>
+                <p class="text-gray-300 text-xl max-w-2xl mx-auto">Muchos empresarios en Perú viven así: rodeados de
+                    papeles, con el celular sonando todo el día y sin control real de su negocio.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white/5 p-8 rounded-3xl border border-white/10 hover:border-red-500/50 transition-colors"
+                <div class="bg-black/40 backdrop-blur-md p-8 rounded-3xl border border-white/10 hover:border-red-500/50 transition-colors"
                     data-aos="fade-up" data-aos-delay="100">
                     <div class="text-4xl mb-4">😫</div>
                     <h3 class="text-xl font-bold text-white mb-3">"No tengo vida"</h3>
                     <p class="text-gray-400">Te pasas el día respondiendo los mismos mensajes de WhatsApp y copiando
                         datos a un Excel. Eres esclavo del teléfono.</p>
                 </div>
-                <div class="bg-white/5 p-8 rounded-3xl border border-white/10 hover:border-red-500/50 transition-colors"
+                <div class="bg-black/40 backdrop-blur-md p-8 rounded-3xl border border-white/10 hover:border-red-500/50 transition-colors"
                     data-aos="fade-up" data-aos-delay="200">
                     <div class="text-4xl mb-4">💸</div>
                     <h3 class="text-xl font-bold text-white mb-3">"Se me van las ventas"</h3>
                     <p class="text-gray-400">Te escriben 10 clientes, respondes tarde a 5 y se olvidan de ti. Pierdes
                         dinero por no responder rápido.</p>
                 </div>
-                <div class="bg-white/5 p-8 rounded-3xl border border-white/10 hover:border-red-500/50 transition-colors"
+                <div class="bg-black/40 backdrop-blur-md p-8 rounded-3xl border border-white/10 hover:border-red-500/50 transition-colors"
                     data-aos="fade-up" data-aos-delay="300">
                     <div class="text-4xl mb-4">📉</div>
                     <h3 class="text-xl font-bold text-white mb-3">"Todo es un desorden"</h3>
@@ -141,46 +153,52 @@
 
             <div class="grid md:grid-cols-2 gap-12">
                 <!-- Automation Card -->
-                <div class="glass p-10 rounded-3xl border-2 border-transparent hover:border-brand-primary/50 transition-all duration-500 group relative overflow-hidden"
+                <div class="glass p-0 rounded-3xl border-2 border-transparent hover:border-brand-primary/50 transition-all duration-500 group relative overflow-hidden flex flex-col"
                     data-aos="fade-right">
-                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                        <svg class="w-32 h-32 text-brand-primary" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.25L12 8.5l-2.5 1.25L12 11zm0 2.5l-5-2.5-5 2.5L12 22l10-8.5-5-2.5-5 2.5z" />
-                        </svg>
+                    <div class="h-64 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-brand-primary/20 mix-blend-overlay z-10"></div>
+                        <img src="{{ asset('images/automation-success.png') }}"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            alt="Empresario Exitoso">
                     </div>
 
-                    <h3 class="text-3xl font-bold text-white mb-4 group-hover:text-brand-primary transition-colors">
-                        Piloto Automático</h3>
-                    <p class="text-gray-300 text-lg mb-8 leading-relaxed">
-                        Creamos robots de software que hacen el trabajo sucio. Facturación automática, recordatorios de
-                        cobro y registro de clientes sin que muevas un dedo.
-                    </p>
-                    <a href="{{ route('services.automation') }}"
-                        class="inline-flex items-center text-brand-primary font-bold text-lg hover:translate-x-2 transition-transform">
-                        Ver cómo funciona <span class="ml-2">→</span>
-                    </a>
+                    <div class="p-10 flex-1 flex flex-col">
+                        <h3 class="text-3xl font-bold text-white mb-4 group-hover:text-brand-primary transition-colors">
+                            Piloto Automático</h3>
+                        <p class="text-gray-300 text-lg mb-8 leading-relaxed flex-1">
+                            Creamos robots de software que hacen el trabajo sucio. Facturación automática, recordatorios
+                            de cobro y registro de clientes sin que muevas un dedo.
+                        </p>
+                        <a href="{{ route('services.automation') }}"
+                            class="inline-flex items-center text-brand-primary font-bold text-lg hover:translate-x-2 transition-transform">
+                            Ver cómo funciona <span class="ml-2">→</span>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Omnichannel Card -->
-                <div class="glass p-10 rounded-3xl border-2 border-transparent hover:border-brand-secondary/50 transition-all duration-500 group relative overflow-hidden"
+                <div class="glass p-0 rounded-3xl border-2 border-transparent hover:border-brand-secondary/50 transition-all duration-500 group relative overflow-hidden flex flex-col"
                     data-aos="fade-left">
-                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                        <svg class="w-32 h-32 text-brand-secondary" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" />
-                        </svg>
+                    <div class="h-64 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-brand-secondary/20 mix-blend-overlay z-10"></div>
+                        <img src="{{ asset('images/omnichannel-team.png') }}"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            alt="Equipo Organizado">
                     </div>
 
-                    <h3 class="text-3xl font-bold text-white mb-4 group-hover:text-brand-secondary transition-colors">
-                        Central de Mando</h3>
-                    <p class="text-gray-300 text-lg mb-8 leading-relaxed">
-                        Deja de saltar entre WhatsApp, Instagram y Messenger. Ten todo en una sola pantalla profesional
-                        para ti y tus vendedores.
-                    </p>
-                    <a href="{{ route('services.omnichannel') }}"
-                        class="inline-flex items-center text-brand-secondary font-bold text-lg hover:translate-x-2 transition-transform">
-                        Ver como funciona <span class="ml-2">→</span>
-                    </a>
+                    <div class="p-10 flex-1 flex flex-col">
+                        <h3
+                            class="text-3xl font-bold text-white mb-4 group-hover:text-brand-secondary transition-colors">
+                            Central de Mando</h3>
+                        <p class="text-gray-300 text-lg mb-8 leading-relaxed flex-1">
+                            Deja de saltar entre WhatsApp, Instagram y Messenger. Ten todo en una sola pantalla
+                            profesional para ti y tus vendedores.
+                        </p>
+                        <a href="{{ route('services.omnichannel') }}"
+                            class="inline-flex items-center text-brand-secondary font-bold text-lg hover:translate-x-2 transition-transform">
+                            Ver como funciona <span class="ml-2">→</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

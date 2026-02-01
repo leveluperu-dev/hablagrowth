@@ -1,13 +1,14 @@
-<nav x-data="{ open: false }" class="glass border-b border-white/10">
+<nav x-data="{ open: false }"
+    class="fixed top-0 w-full z-50 glass border-b border-white/10 bg-brand-dark/90 backdrop-blur-md">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
+        <div class="flex justify-between h-20">
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}" class="flex items-center gap-2 group">
                         <!-- Logo Icon -->
-                        <svg class="h-16 w-auto text-brand-primary group-hover:text-brand-accent transition-colors"
+                        <svg class="h-12 w-auto text-brand-primary group-hover:text-brand-accent transition-colors"
                             viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M25 46C36.598 46 46 36.598 46 25C46 13.402 36.598 4 25 4C13.402 4 4 13.402 4 25C4 36.598 13.402 46 25 46Z"
@@ -21,7 +22,7 @@
                         </svg>
                         <!-- Logo Text -->
                         <span
-                            class="text-3xl font-extrabold tracking-tighter text-white group-hover:text-gray-100 transition-colors">
+                            class="text-2xl font-extrabold tracking-tighter text-white group-hover:text-gray-100 transition-colors">
                             Habla<span class="text-brand-primary group-hover:text-brand-accent">Growth</span>
                         </span>
                     </a>
@@ -30,7 +31,7 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')"
-                        class="text-gray-300 hover:text-brand-primary active:text-brand-primary">
+                        class="text-gray-300 hover:text-brand-primary active:text-brand-primary text-lg">
                         {{ __('Inicio') }}
                     </x-nav-link>
 
@@ -39,7 +40,7 @@
                         <x-dropdown align="right" width="48">
                             <x-slot name="trigger">
                                 <button
-                                    class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-300 bg-transparent hover:text-white focus:outline-none transition ease-in-out duration-150">
+                                    class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-300 bg-transparent hover:text-white focus:outline-none transition ease-in-out duration-150 text-lg">
                                     <div>Servicios</div>
                                     <div class="ms-1">
                                         <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
@@ -52,17 +53,19 @@
                                 </button>
                             </x-slot>
                             <x-slot name="content">
-                                <x-dropdown-link :href="route('services.automation')">
+                                <x-dropdown-link :href="route('services.automation')"
+                                    class="text-gray-800 hover:bg-gray-100">
                                     Automatización
                                 </x-dropdown-link>
-                                <x-dropdown-link :href="route('services.omnichannel')">
+                                <x-dropdown-link :href="route('services.omnichannel')"
+                                    class="text-gray-800 hover:bg-gray-100">
                                     Omnicanalidad
                                 </x-dropdown-link>
                             </x-slot>
                         </x-dropdown>
                     </div>
 
-                    <x-nav-link href="/#pricing" class="text-gray-300 hover:text-brand-primary">
+                    <x-nav-link href="/#pricing" class="text-gray-300 hover:text-brand-primary text-lg">
                         Planes
                     </x-nav-link>
                 </div>
@@ -91,16 +94,18 @@
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
                                 <x-dropdown-link :href="route('logout')"
-                                    onclick="event.preventDefault(); this.closest('form').submit();">
+                                    onclick="event.preventDefault(); this.closest('form').submit();"
+                                    class="text-gray-800 hover:bg-gray-100">
                                     {{ __('Cerrar Sesión') }}
                                 </x-dropdown-link>
                             </form>
                         </x-slot>
                     </x-dropdown>
                 @else
-                    <a href="{{ route('login') }}" class="text-sm text-gray-300 hover:text-white mr-4">Ingresar</a>
+                    <a href="{{ route('login') }}"
+                        class="text-base text-gray-300 hover:text-white mr-6 font-medium">Ingresar</a>
                     <a href="https://wa.me/51945178963?text=Hola,%20quiero%20crear%20mi%20cuenta." target="_blank"
-                        class="px-4 py-2 bg-brand-primary text-brand-dark font-bold rounded-lg text-sm hover:bg-brand-accent transition-colors">
+                        class="px-5 py-2.5 bg-brand-primary text-brand-dark font-bold rounded-full text-base hover:bg-brand-accent transition-all shadow-lg hover:shadow-brand-primary/25">
                         Registrarse
                     </a>
                 @endauth
@@ -123,18 +128,21 @@
     </div>
 
     <!-- Responsive Navigation Menu -->
-    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden glass">
+    <div :class="{'block': open, 'hidden': ! open}"
+        class="hidden sm:hidden glass bg-brand-dark border-t border-white/10">
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')"
-                class="text-gray-300">
+                class="text-gray-300 hover:text-white hover:bg-white/5">
                 Inicio
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('services.automation')"
-                :active="request()->routeIs('services.automation')" class="text-gray-300">
+                :active="request()->routeIs('services.automation')"
+                class="text-gray-300 hover:text-white hover:bg-white/5">
                 Automatización
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('services.omnichannel')"
-                :active="request()->routeIs('services.omnichannel')" class="text-gray-300">
+                :active="request()->routeIs('services.omnichannel')"
+                class="text-gray-300 hover:text-white hover:bg-white/5">
                 Omnicanalidad
             </x-responsive-nav-link>
         </div>
