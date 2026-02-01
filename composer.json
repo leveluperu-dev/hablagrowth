@@ -13,7 +13,7 @@
         "filament/filament": "^5.1",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
-        "biscolab/laravel-recaptcha": "^6.1"
+        "biscolab/laravel-recaptcha": "*"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
