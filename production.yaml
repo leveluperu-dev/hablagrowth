@@ -23,6 +23,19 @@ services:
       - "traefik.http.routers.hablagrowth-http.entrypoints=web"
       - "traefik.http.routers.hablagrowth-http.middlewares=https-redirect"
       - "traefik.http.middlewares.https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.middlewares.https-redirect.redirectscheme.scheme=https"
+
+  mysql:
+    image: mysql:8.0
+    container_name: hablagrowth_db
+    restart: always
+    environment:
+      MYSQL_DATABASE: hablagrowth
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - traefik
 
   queue:
     build:
@@ -36,3 +49,6 @@ services:
 networks:
   traefik:
     external: true
+
+volumes:
+  db_data:
