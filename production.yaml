@@ -7,6 +7,9 @@ services:
     volumes:
       - ./storage:/var/www/html/storage
       - ./.env:/var/www/html/.env
+      - ./app:/var/www/html/app
+      - ./resources:/var/www/html/resources
+      - ./routes:/var/www/html/routes
     networks:
       - traefik
     labels:
