@@ -8,7 +8,11 @@ Route::get('/', function () {
 })->name('home');
 
 Route::view('/automation', 'services.automation')->name('services.automation');
+Route::view('/automation', 'services.automation')->name('services.automation');
 Route::view('/omnichannel', 'services.omnichannel')->name('services.omnichannel');
+
+Route::view('/policies/privacy', 'legal.privacy')->name('legal.privacy');
+Route::view('/policies/terms', 'legal.terms')->name('legal.terms');
 
 // Client Dashboard
 Route::middleware(['auth', 'verified'])->group(function () {
