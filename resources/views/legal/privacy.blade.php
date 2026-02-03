@@ -1,52 +1,94 @@
-<x-guest-layout>
-    <div class="pt-4 bg-gray-100">
-        <div class="min-h-screen flex flex-col items-center pt-6 sm:pt-0">
-            <div class="w-full sm:max-w-4xl mt-6 p-6 bg-white shadow-md overflow-hidden sm:rounded-lg prose">
-                <h1>Política de Privacidad</h1>
-                <p>Última actualización: {{ date('d/m/Y') }}</p>
+<x-layouts.app>
+    <div class="pt-24 pb-12 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden">
+                <div class="p-8 sm:p-12 prose prose-invert max-w-none">
+                    <h1 class="text-3xl font-bold text-white mb-6">Política de Privacidad</h1>
+                    <p class="text-gray-400 mb-8">Última actualización: {{ date('d/m/Y') }}</p>
 
-                <h2>1. Información General</h2>
-                <p>En <strong>HablaGrowth</strong> (en adelante "la Empresa"), valoramos la privacidad de nuestros
-                    usuarios y nos comprometemos a proteger su información personal. Esta Política de Privacidad
-                    describe cómo recopilamos, usamos y protegemos sus datos.</p>
+                    <h2 class="text-xl font-semibold text-white mt-8 mb-4">1. Introducción</h2>
+                    <p class="text-gray-300">
+                        Bienvenido a <strong>HablaGrowth</strong> (en adelante "la Empresa", "nosotros", "nuestro").
+                        Respetamos su privacidad y nos comprometemos a proteger su información personal.
+                        Esta Política de Privacidad explica cómo recopilamos, usamos, divulgamos y protegemos sus datos
+                        cuando utiliza nuestro sitio web y nuestra aplicación (incluida la integración con Facebook
+                        Apps).
+                    </p>
 
-                <h2>2. Recopilación de Información</h2>
-                <p>Podemos recopilar información personal como su nombre, dirección de correo electrónico, número de
-                    teléfono y nombre de la empresa cuando se registra en nuestros servicios o se comunica con nosotros.
-                    También recopilamos datos de uso y cookies para mejorar nuestra plataforma.</p>
+                    <h2 class="text-xl font-semibold text-white mt-8 mb-4">2. Información que Recopilamos</h2>
+                    <p class="text-gray-300">Podemos recopilar los siguientes tipos de información:</p>
+                    <ul class="list-disc pl-5 text-gray-300 space-y-2">
+                        <li><strong>Información proporcionada por usted:</strong> Nombre, dirección de correo
+                            electrónico, número de teléfono y otros datos de contacto cuando se registra o comunica con
+                            nosotros.</li>
+                        <li><strong>Datos de Facebook:</strong> Si utiliza nuestra integración con Facebook, podemos
+                            recibir información pública de su perfil (nombre, foto de perfil) y dirección de correo
+                            electrónico, sujeto a su configuración de privacidad en Facebook.</li>
+                        <li><strong>Datos de uso:</strong> Información sobre cómo interactúa con nuestros servicios,
+                            dirección IP, tipo de navegador y páginas visitadas.</li>
+                    </ul>
 
-                <h2>3. Uso de la Información</h2>
-                <p>Utilizamos su información para:</p>
-                <ul>
-                    <li>Proveer y mantener nuestros servicios.</li>
-                    <li>Notificarle sobre cambios en nuestros servicios.</li>
-                    <li>Brindar soporte al cliente.</li>
-                    <li>Recopilar análisis o información valiosa para mejorar nuestro servicio.</li>
-                    <li>Detectar, prevenir y abordar problemas técnicos.</li>
-                </ul>
+                    <h2 class="text-xl font-semibold text-white mt-8 mb-4">3. Cómo Usamos su Información</h2>
+                    <p class="text-gray-300">Utilizamos la información recopilada para:</p>
+                    <ul class="list-disc pl-5 text-gray-300 space-y-2">
+                        <li>Proporcionar, operar y mantener nuestros servicios.</li>
+                        <li>Mejorar, personalizar y expandir nuestra plataforma.</li>
+                        <li>Procesar transacciones y enviar notificaciones relacionadas.</li>
+                        <li>Comunicarnos con usted para servicio al cliente, actualizaciones y fines de marketing (si ha
+                            dado su consentimiento).</li>
+                        <li>Detectar y prevenir fraudes.</li>
+                    </ul>
 
-                <h2>4. Protección de Datos</h2>
-                <p>La seguridad de sus datos es importante para nosotros, pero recuerde que ningún método de transmisión
-                    por Internet o almacenamiento electrónico es 100% seguro. Nos esforzamos por utilizar medios
-                    comercialmente aceptables para proteger su información personal, pero no podemos garantizar su
-                    seguridad absoluta.</p>
+                    <h2 class="text-xl font-semibold text-white mt-8 mb-4">4. Compartir Información</h2>
+                    <p class="text-gray-300">
+                        No vendemos su información personal. Podemos compartir información con proveedores de servicios
+                        externos
+                        que nos ayudan a operar nuestro negocio (por ejemplo, procesamiento de pagos, alojamiento web),
+                        bajo estrictos acuerdos de confidencialidad. También podemos divulgar información si así lo
+                        exige la ley.
+                    </p>
 
-                <h2>5. Divulgación a Terceros</h2>
-                <p>No vendemos, comercializamos ni transferimos de ningún otro modo a terceros su información de
-                    identificación personal, a menos que se lo notifiquemos con antelación. Esto no incluye a los socios
-                    de alojamiento de sitios web y otras partes que nos asisten en la operación de nuestro sitio web, la
-                    realización de nuestros negocios o el servicio a nuestros usuarios, siempre que dichas partes
-                    acuerden mantener esta información confidencial.</p>
+                    <h2 class="text-xl font-semibold text-white mt-8 mb-4">5. Seguridad de los Datos</h2>
+                    <p class="text-gray-300">
+                        Implementamos medidas de seguridad técnicas y organizativas para proteger sus datos personales
+                        contra
+                        acceso no autorizado, pérdida o alteración. Sin embargo, ninguna transmisión por Internet es
+                        100% segura.
+                    </p>
 
-                <h2>6. Cambios a esta Política</h2>
-                <p>Podemos actualizar nuestra Política de Privacidad periódicamente. Le notificaremos cualquier cambio
-                    publicando la nueva Política en esta página. Se le aconseja revisar esta Política periódicamente
-                    para detectar cualquier cambio.</p>
+                    <h2 class="text-xl font-semibold text-white mt-8 mb-4">6. Eliminación de Datos (Data Deletion)</h2>
+                    <p class="text-gray-300">
+                        De acuerdo con las políticas de la Plataforma de Facebook, le proporcionamos instrucciones para
+                        solicitar
+                        la eliminación de sus datos:
+                    </p>
+                    <ol class="list-decimal pl-5 text-gray-300 space-y-2 mt-2">
+                        <li>Inicie sesión en su cuenta de HablaGrowth y vaya a la configuración de su perfil.</li>
+                        <li>Haga clic en la opción "Eliminar Cuenta" o "Solicitar Borrado de Datos".</li>
+                        <li>Alternativamente, puede enviarnos un correo electrónico a
+                            <strong>privacy@hablagrowth.online</strong> solicitando la eliminación de sus datos.</li>
+                    </ol>
+                    <p class="text-gray-300 mt-2">
+                        Procesaremos su solicitud y eliminaremos sus datos de nuestros servidores en un plazo razonable,
+                        salvo que estemos obligados legalmente a conservarlos.
+                    </p>
 
-                <h2>7. Contacto</h2>
-                <p>Si tiene alguna pregunta sobre esta Política de Privacidad, contáctenos a través de nuestro sitio
-                    web.</p>
+                    <h2 class="text-xl font-semibold text-white mt-8 mb-4">7. Sus Derechos</h2>
+                    <p class="text-gray-300">
+                        Usted tiene derecho a acceder, corregir, actualizar o solicitar la eliminación de su información
+                        personal.
+                        Contáctenos para ejercer estos derechos.
+                    </p>
+
+                    <h2 class="text-xl font-semibold text-white mt-8 mb-4">8. Contacto</h2>
+                    <p class="text-gray-300">
+                        Si tiene preguntas sobre esta Política de Privacidad, contáctenos en:<br>
+                        Email: <strong>contact@hablagrowth.online</strong><br>
+                        Web: <a href="https://hablagrowth.online"
+                            class="text-brand-primary hover:underline">https://hablagrowth.online</a>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-</x-guest-layout>
+</x-layouts.app>
