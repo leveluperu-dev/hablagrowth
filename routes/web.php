@@ -8,7 +8,6 @@ Route::get('/', function () {
 })->name('home');
 
 Route::view('/automation', 'services.automation')->name('services.automation');
-Route::view('/automation', 'services.automation')->name('services.automation');
 Route::view('/omnichannel', 'services.omnichannel')->name('services.omnichannel');
 
 Route::view('/policies/privacy', 'legal.privacy')->name('legal.privacy');
