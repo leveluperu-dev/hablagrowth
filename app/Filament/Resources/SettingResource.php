@@ -16,7 +16,7 @@ class SettingResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-cog';
 
-    protected static ?string $navigationGroup = 'System';
+    protected static string|\UnitEnum|null $navigationGroup = 'System';
 
     public static function form(Form $form): Form
     {
